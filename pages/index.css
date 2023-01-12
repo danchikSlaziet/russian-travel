@@ -1,0 +1,115 @@
+@import url(../vendor/normalize.css);
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/Inter-Regular.woff) format('woff'), url(../fonts/Inter-Regular.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/Inter-Bold.woff) format('woff'), url(../fonts/Inter-Bold.woff2) format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/Inter-Black.woff) format('woff'), url(../fonts/Inter-Black.woff2) format('woff2');
+  font-weight: 900;
+}
+
+
+/* ----------------------------- HEADER -------------------------------------------------------- */
+
+.page {
+  box-sizing: border-box;
+  background-color: #2A2C2F;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 92.5%; 
+}
+
+.page__header {
+  margin-top: 28px;
+  margin-bottom: 56px;
+}
+
+.header__logo {
+  width: 176px;
+  height: 52px;
+}
+
+.header__lang-link {
+  font-size: 24px;
+  line-height: 1.17;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__lang-link_active {
+  position: relative;
+}
+
+.header__lang-link_active::after {
+  position: absolute;
+  content: '';
+  bottom: -1.3px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: white;
+  /* это для подгонки под pixelPerfect */
+}
+
+.header__lang-link:not(:last-child) {
+  margin-right: 14px;
+}
+
+.header__links-wrapper {
+  padding-bottom: 6px;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .header {
+    width: 90.6%;
+  }
+
+  .page__header {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .header {
+    width: 93.8%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .header {
+    width: 90%;
+  }
+
+  .page__header {
+    margin-top: 16px;
+  }
+
+  .header__logo {
+    width: 142px;
+    height: 42px;
+  }
+
+  .header__lang-link {
+    font-size: 18px;
+    line-height: 1.11%;
+  }
+}
