@@ -2,19 +2,19 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url(../fonts/Inter-Regular.woff) format('woff'), url(../fonts/Inter-Regular.woff2) format('woff2');
+  src: url(../vendor/fonts/Inter-Regular.woff) format('woff'), url(../vendor/fonts/Inter-Regular.woff2) format('woff2');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url(../fonts/Inter-Bold.woff) format('woff'), url(../fonts/Inter-Bold.woff2) format('woff2');
+  src: url(../vendor/fonts/Inter-Bold.woff) format('woff'), url(../vendor/fonts/Inter-Bold.woff2) format('woff2');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url(../fonts/Inter-Black.woff) format('woff'), url(../fonts/Inter-Black.woff2) format('woff2');
+  src: url(../vendor/fonts/Inter-Black.woff) format('woff'), url(../vendor/fonts/Inter-Black.woff2) format('woff2');
   font-weight: 900;
 }
 
@@ -25,6 +25,7 @@
   box-sizing: border-box;
   background-color: #2A2C2F;
   font-family: 'Inter', sans-serif;
+  font-weight: 400;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -204,5 +205,133 @@
 
   .page__lead {
     margin-bottom: 64px;
+  }
+}
+
+/* --------------------------------------------------  INTRO  ------------------------------------------- */
+
+.intro {
+  width: 76.9%;
+  text-align: left;
+}
+
+.intro__title {
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 1.07;
+  margin: 0;
+  margin-bottom: 40px;
+  max-width: 690px;
+}
+
+.intro__text {
+  font-size: 16px;
+  line-height: 163%;
+  margin: 0;
+  margin-bottom: 33px;
+  max-width: 690px;
+}
+
+.intro__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.intro__list-item {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.page__intro {
+  margin-bottom: 92px;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .intro {
+    width: 90.6%;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .intro {
+    width: 93.75%;
+  }
+  
+  .page__intro {
+    margin-bottom: 88px;
+  }
+
+  .intro__title {
+    max-width: 720px;
+  }
+
+  .intro__text {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .intro {
+    width: 90%;
+  }
+
+  .page__intro {
+    margin-bottom: 64px;
+  }
+
+  .intro__title {
+    font-size: 32px;
+    line-height: 1.09;
+  }
+}
+
+/* -------------------------------------------PHOTO - GRID ------------------------------------------ */
+
+.photo-grid {
+  display: grid;
+  width: 92.5%;
+  grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+  gap: 16px;
+}
+
+.photo-grid__item {
+  width: 100%;
+  /* object-fit не работает почему-то */
+}
+
+.page__photo-grid {
+  margin-bottom: 92px;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .photo-grid {
+    width: 90.63%;
+    gap: 14px;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .photo-grid {
+    width: 93.75%;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+  }
+
+  .page__photo-grid {
+    margin-bottom: 88px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .photo-grid {
+    width: 90%;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   }
 }
