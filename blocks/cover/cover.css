@@ -1,5 +1,8 @@
 .cover {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url(../../images/cover-trains.jpg);
   background-size: cover;
   background-position: center;
